@@ -5,6 +5,7 @@ const emailValidation = (email) => {
     return regex.test(email);
 };
 
+
 const UserSchema = new Schema(
     {
         username: {
@@ -26,7 +27,7 @@ const UserSchema = new Schema(
                 ref: 'Thought'
             }
         ],
-        friends: [UserSchema]
+        friends: [this]
     },
     {
         toJSON: {
