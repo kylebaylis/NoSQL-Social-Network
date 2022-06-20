@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+const {Schema, model, Types} = require('mongoose');
 
 const emailValidation = (email) => {
     const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
