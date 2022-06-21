@@ -16,7 +16,7 @@ const ThoughtSchema = new Schema(
             get: createdAtVal => createdAtVal.toDateString()
         },
         username: {
-            type: Schema.Types.ObjectId,
+            type: String,
             ref: 'User',
             required: true
         },
@@ -26,7 +26,8 @@ const ThoughtSchema = new Schema(
         toJSON: {
             virtuals: true,
             getters: true
-        }
+        },
+        id: false
     }
 );
 
