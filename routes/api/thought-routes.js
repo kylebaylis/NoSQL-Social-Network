@@ -21,4 +21,7 @@ router
     .put(updateThought)
     .delete(deleteThought);
 
+// /api/thoughts/:thoughtId/reactions
+// will go here
+
 module.exports = router;
