@@ -5,6 +5,18 @@ const emailValidation = (email) => {
     return regex.test(email);
 };
 
+const FriendSchema = new Schema(
+    {
+        friendId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
+        friendBody: {
+            type: String,
+            required: true
+        }
+    }
+);
 
 const UserSchema = new Schema(
     {
@@ -27,7 +39,7 @@ const UserSchema = new Schema(
                 ref: 'Thought'
             }
         ],
-        friends: [this]
+        friends: [FriendSchema]
     },
     {
         toJSON: {
